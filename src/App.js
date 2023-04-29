@@ -33,6 +33,10 @@ function App() {
   // }, [toDoList]);
 
   const addItem = (e) => {
+    if (!newItem.trim()) {
+      // newItem is empty or contains only whitespace characters
+      return;
+    }
     e.preventDefault()
     const id = toDoList.length ? toDoList[toDoList.length - 1].id + 1 : 1;
     const newItemAdded = { id, task: newItem, completed: false }
@@ -86,5 +90,3 @@ function App() {
 }
 
 export default App;
-//would everse it 
-//and check how I would prevent space to stop storing as message
