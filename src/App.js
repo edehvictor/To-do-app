@@ -13,13 +13,14 @@ function App() {
   useEffect(() => {
     const storeData = JSON.parse(localStorage.getItem('todos'))
     const storedCount = JSON.parse(localStorage.getItem("counter"));
+
     if (storeData) {
       setToDoList(storeData);
       console.log(storeData, 'done')
     }
     if (storedCount) {
       setCount(storedCount);
-      console.log(storedCount, 'count')
+      // console.log(storedCount, 'count')
     }
   }, [])
 
@@ -67,6 +68,14 @@ function App() {
     localStorage.setItem('counter', counter);
   };
 
+  const handleDelteCompletedTask = () => {
+    const deleteCompleted = toDoList.filter((item) => !item.completed)
+    const counter = deleteCompleted.filter((item) => item.completed).length
+    setCount(counter)
+    setToDoList(deleteCompleted);
+    localStorage.setItem('todos', JSON.stringify(deleteCompleted));
+    localStorage.setItem('counter', counter);
+    };
 
   return (
     <div className="App">
@@ -84,7 +93,8 @@ function App() {
         handleCheckChange={handleCheckChange}
       />
       <Footer
-        count={count} />
+        count={count}
+        handleDelteCompletedTask={handleDelteCompletedTask} />
     </div>
   );
 }
