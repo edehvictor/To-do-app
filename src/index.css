@@ -131,12 +131,12 @@ input[type="text"]::placeholder {
   cursor: pointer;
   color: #dc3545;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 2rem;
   height: 40px;
   padding: 0;
   width: 40px;
   vertical-align: middle;
-margin-top: 10.3px;
+/* margin-top: 10.3px; */
 }
 
 @media screen and (max-width: 540px) {
