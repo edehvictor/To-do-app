@@ -129,14 +129,14 @@ input[type="text"]::placeholder {
 .footer span {
   min-width: 58px;
   cursor: pointer;
-  color: #dc3545;
+  color: red;
   cursor: pointer;
   font-size: 2rem;
   height: 40px;
   padding: 0;
   width: 40px;
   vertical-align: middle;
-/* margin-top: 10.3px; */
+line-height: 40px;
 }
 
 @media screen and (max-width: 540px) {

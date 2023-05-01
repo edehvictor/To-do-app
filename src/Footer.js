@@ -6,7 +6,7 @@ const Footer = ({ count, handleDelteCompletedTask }) => {
     return (
         <div className='footer' >
             <h2 > {count} completed  </h2>
-            <span onClick={handleDelteCompletedTask}>✂</span>
+            <span onClick={handleDelteCompletedTask}>🗑</span>
 
         </div>
     )
